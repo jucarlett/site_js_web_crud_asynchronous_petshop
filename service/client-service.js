@@ -27,34 +27,14 @@ const tabela = document.querySelector("[data-tabela]");
 
 // Define uma função para listar os clientes
 const listaClientes = () => {
-  // Cria uma nova Promise
-  const promise = new Promise((resolve, reject) => {
-    // Cria um novo XMLHttpRequest
-    const http = new XMLHttpRequest();
+  return fetch(`http://localhost:3000/profile`) //fetch faz o get e devolde uma promise já
+    .then(resposta => {
+      return resposta.json(); //retorna uma promise
+    })
+}
+  
 
-    // Abre uma nova requisição GET para um endpoint específico
-    http.open("GET", "http://localhost:3000/profile");
-
-    // Envia a requisição
-    http.send();
-
-    // Define o que acontece quando a requisição é carregada
-    http.onload = () => {
-      // Se o status HTTP for 400 ou mais, rejeita a Promise com a resposta como motivo
-      if (http.status >= 400) {
-        reject(JSON.parse(http.response));
-      } else {
-        // Se o status HTTP for menor que 400, resolve a Promise com a resposta como valor
-        resolve(JSON.parse(http.response));
-      }
-    };
-  });
-
-  // Retorna a Promise
-  return promise;
-};
-
-// Chama a função listaClientes
+    // Chama a função listaClientes
 listaClientes().then((data) => {
   // Para cada elemento nos dados retornados, anexa uma nova linha à tabela
   data.forEach((element) => {
