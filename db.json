@@ -1,9 +1,19 @@
 {
   "profile": [
     {
-      "nome": "felipe",
-      "email": "felipe@alura.com",
+      "nome": "ju",
+      "email": "julie@teste.com",
       "id": 1
+    },
+    {
+      "nome": "ju",
+      "email": "teste@gmail.com",
+      "id": 2
+    },
+    {
+      "nome": "jujuba",
+      "email": "jujuba@teste.com",
+      "id": 3
     }
   ]
 }
