@@ -6,9 +6,19 @@
       "id": 1
     },
     {
-      "nome": "ju",
+      "nome": "teste",
       "email": "teste@gmail.com",
       "id": 2
+    },
+    {
+      "nome": "UserTest",
+      "email": "usertest@teste.com",
+      "id": 3
+    },
+    {
+      "nome": "userA",
+      "email": "userA@teste.com",
+      "id": 4
     }
   ]
 }
